@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elara Jewels</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header page-width">
+
+        <div class="logo">
+            <h1>Elara</h1>
+            <p>Jewels</p>
+        </div>
+
+        <nav class="top-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="#collections">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="theme-toggle">🌓</button>
+            <button id="menu-open">☰</button>
+            <button id="cart-open">🛒 (<span id="cart-count">0</span>)
+            </button>
+        </div>
+
+    </header>
+
+    <!-- MENU -->
+    <div id="menu-overlay" class="overlay">
+
+        <div class="menu-content">
+
+            <button class="close-btn" id="menu-close">×</button>
+
+            <nav class="mobile-nav">
+                <a href="#collections" onclick="toggleMenu()">Collections</a>
+                <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+                <a href="#about" onclick="toggleMenu()">About</a>
+                <a href="#contact" onclick="toggleMenu()">Contact</a>
+            </nav>
+
+        </div>
+
+    </div>
+
+    <!-- CART SIDEBAR -->
+    <div id="cart-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Your Cart</h3>
+
+            <button class="close-btn" id="cart-close">x</button>
+        </div>
+
+        <p id="item-status">0 item(s) selected</p>
+        <div id="cart-items-container">
+
+            <p class="empty-msg">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+        <div class="sidebar-footer">
+
+            <div class="total-row">
+                <span>Total</span>
+                <span id="cart-total">₹0</span>
+            </div>
+
+            <button class="checkout-btn">
+                Proceed to Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>Elegant Jewellery for Every Occasion</h2>
+
+            <p>
+                Discover timeless beauty and luxury collections.
+            </p>
+
+            <button class="shop-now">
+                Shop Now
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products page-width" id="collections">
+
+        <h2>Featured Collections</h2>
+
+        <!-- CATEGORY FILTER BAR -->
+        <div class="category-filter">
+
+            <button class="cat-btn" data-cat="all">
+                <div class="cat-icon">✦</div>
+                <span>ALL</span>
+            </button>
+
+            <button class="cat-btn" data-cat="rings">
+                <div class="cat-icon">💍</div>
+                <span>RINGS</span>
+            </button>
+
+            <button class="cat-btn" data-cat="necklaces">
+                <div class="cat-icon">📿</div>
+                <span>NECKLACES</span>
+            </button>
+
+            <button class="cat-btn" data-cat="earrings">
+                <div class="cat-icon">✨</div>
+                <span>EARRINGS</span>
+            </button>
+
+            <button class="cat-btn" data-cat="bracelets">
+                <div class="cat-icon">🔗</div>
+                <span>BRACELETS</span>
+            </button>
+
+            <button class="cat-btn" data-cat="nose-pins">
+                <div class="cat-icon">◎</div>
+                <span>NOSE PINS</span>
+            </button>
+
+            <button class="cat-btn" data-cat="anklets">
+                <div class="cat-icon">🌸</div>
+                <span>ANKLETS</span>
+            </button>
+
+        </div>
+
+        <div class="product-grid">
+
+            <!-- RINGS -->
+             <div class="product-card" data-cat="rings">
+                <img src="images/ring.jpg" alt="Anti Tarnish Ring">
+                <h3>Anti Tarnish Ring</h3>
+                <p>500</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="rings">
+                <img src="images/Classic Signet Ring.jpg" alt="Classic Ring">
+                <h3>Classic Signet Ring</h3>
+                <p>500</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="rings">
+                <img src="images/Gold Band Ring.jpg" alt="Gold Band Ring">
+                <h3>Gold Band Ring</h3>
+                <p>750</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="rings">
+                <img src="images/Diamond Solitaire Ring.jpg" alt="Diamond Solitaire Ring">
+                <h3>Diamond Solitaire Ring</h3>
+                <p>3500</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="rings">
+                <img src="images/Twisted Vine Ring.jpg" alt="Twisted Vine Ring">
+                <h3>Twisted Vine Ring</h3>
+                <p>620</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- NECKLACES -->
+            <div class="product-card" data-cat="necklaces">
+                <img src="images/necklace.jpg" alt="Elegant Necklace">
+                <h3>Elegant Necklace</h3>
+                <p>2000</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="necklaces">
+                <img src="images/Pearl Strand Necklace.jpg" alt="Pearl Strand Necklace">
+                <h3>Pearl Strand Necklace</h3>
+                <p>2800</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="necklaces">
+                <img src="images/Gold Chain Necklace.jpg" alt="Gold Chain Necklace">
+                <h3>Gold Chain Necklace</h3>
+                <p>1800</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- EARRINGS -->
+            <div class="product-card" data-cat="earrings">
+                <img src="images/earings.jpg" alt="Elegant Earrings">
+                <h3>Elegant Earrings</h3>
+                <p>500</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="earrings">
+                <img src="images/Gold Hoop Earrings.jpg" alt="Hoop Earrings">
+                <h3>Gold Hoop Earrings</h3>
+                <p>650</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="earrings">
+                <img src="images/Crystal Drop Earrings.jpg" alt="Layered Hoop Earrings">
+                <h3>Crystal Drop Earrings</h3>
+                <p>900</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="earrings">
+                <img src="images/Layered Hoop Earrings.jpg" alt="Drop Earrings">
+                <h3>Layered Hoop Earrings</h3>
+                <p>900</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- BRACELETS -->
+            <div class="product-card" data-cat="bracelets">
+                <img src="images/bracelets.jpg" alt="Elegant Bracelets">
+                <h3>Elegant Bracelets</h3>
+                <p>1000</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="bracelets">
+                <img src="images//Gold Charm Bracelet.jpg" alt="Charm Bracelet">
+                <h3>Gold Charm Bracelet</h3>
+                <p>1400</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-cat="bracelets">
+                <img src="images/Diamond Charm Bracelet.jpg" alt="Charm Bracelet">
+                <h3>Diamond Charm Bracelet</h3>
+                <p>1400</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- NOSE PINS -->
+            <div class="product-card" data-cat="nose-pins">
+                <img src="images/nose-p.jpg" alt="Elegant Nose Pin">
+                <h3>Elegant Nose Pin</h3>
+                <p>700</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="nose-pins">
+                <img src="images/Diamond Nose Stud.jpg" alt="Diamond Nose Stud">
+                <h3>Diamond Nose Stud</h3>
+                <p>950</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- ANKLETS -->
+            <div class="product-card" data-cat="anklets">
+                <img src="images/anklet.jpg" alt="Elegant Anklet">
+                <h3>Elegant Anklet</h3>
+                <p>1500</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-cat="anklets">
+                <img src="images/Beaded Gold Anklet.jpg" alt="Beaded Anklet">
+                <h3>Beaded Gold Anklet</h3>
+                <p>1200</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ABOUT -->
+    <section class="about page-width" id="about">
+
+        <h2>About Elara Jewels</h2>
+
+        <p>
+            At Elara Jewels, we believe jewellery is more than just an accessory —
+            it is a reflection of elegance, confidence, and timeless beauty.
+
+            Every piece in our collection is carefully crafted to celebrate life’s
+            precious moments with luxury and sophistication. From delicate earrings
+            and elegant necklaces to stunning rings and bracelets, our designs are
+            inspired by modern fashion and classic artistry.
+
+            We are committed to delivering premium quality jewellery that makes every
+            customer feel special, confident, and unforgettable.
+
+            Whether you are searching for everyday elegance or a statement piece for
+            a special occasion, Elara Jewels brings you collections designed with
+            passion, beauty, and perfection.
+        </p>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact page-width" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <form>
+
+            <input type="text" placeholder="Your Name" required />
+
+            <input type="email" placeholder="Your Email" required />
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-container page-width">
+
+            <!-- BRAND -->
+            <div class="footer-box">
+
+                <h3>Elara Jewels</h3>
+
+                <p>
+                    Premium jewellery collections crafted with elegance,
+                    luxury, and timeless beauty for every occasion.
+                </p>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <a href="#">Home</a>
+                <a href="#collections">Collections</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+            <!-- CUSTOMER SUPPORT -->
+            <div class="footer-box">
+
+                <h3>Customer Support</h3>
+
+                <a href="#">Shipping Policy</a>
+                <a href="#">Returns & Refunds</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">FAQs</a>
+
+            </div>
+
+            <!-- SOCIAL -->
+            <div class="footer-box">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="#">F</a>
+
+                    <a href="#">I</a>
+
+                    <a href="#">T</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Elara Jewels | Designed with Luxury & Elegance
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
